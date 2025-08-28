@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>António Fonseca — Marketing & Redes Sociais</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f141b; --muted:#93a1b0; --text:#e9eef5; --brand:#7dd3fc; --brand2:#a78bfa;
+      --ring:0 0 0 3px rgba(125,211,252,.4);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:radial-gradient(1200px 800px at 10% 10%,#101825 0%,#0b0f14 55%),
+                 radial-gradient(1400px 900px at 90% 120%,#0f1725 0%,#0b0f14 60%);
+         color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    .badge{display:inline-block;padding:.35rem .6rem;border:1px solid #223143;border-radius:999px;color:var(--muted);font-size:.8rem;letter-spacing:.02em}
+    header{position:sticky;top:0;background:rgba(11,15,20,.6);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid #1a2431}
+    nav{display:flex;align-items:center;gap:18px;justify-content:space-between}
+    nav .links a{padding:10px 12px;border-radius:12px;text-decoration:none;color:var(--muted)}
+    nav .links a:hover{background:#141c28;color:var(--text)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:56px 0}
+    .title{font-size:clamp(28px,6vw,56px);line-height:1.1;margin:0 0 12px}
+    .subtitle{font-size:clamp(16px,3vw,22px);color:var(--muted);margin:0 0 18px}
+    .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid #1f2a38;background:#0d131c;padding:8px 12px;border-radius:999px;font-size:14px;color:#c6d1de}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{appearance:none;border:0;cursor:pointer;padding:12px 16px;border-radius:14px;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#0a0f14}
+    .btn-primary:focus{outline:none;box-shadow:var(--ring)}
+    .btn-ghost{background:transparent;border:1px solid #203041;color:#cfe7ff}
+    .panel{background:linear-gradient(180deg,#0f141b,#0c121a);border:1px solid #152233;border-radius:20px;padding:18px}
+
+    /* typing */
+    .typing-wrap{display:flex;align-items:center;gap:8px;font-size:clamp(18px,3.5vw,28px)}
+    .cursor{display:inline-block;width:2px;height:1em;background:linear-gradient(var(--brand),var(--brand2));margin-left:2px;animation:blink .8s infinite}
+    @keyframes blink {0%,50%{opacity:1} 51%,100%{opacity:0}}
+
+    /* grids */
+    .grid{display:grid;gap:20px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg,#0f141b,#0b1118);border:1px solid #132031;border-radius:18px;padding:18px}
+    .card h3{margin:0 0 6px;font-size:20px}
+    .muted{color:var(--muted)}
+    .kpi{font-size:28px;font-weight:700}
+    .kpi small{font-size:14px;color:var(--muted)}
+
+    footer{border-top:1px dashed #1e2a3a;margin-top:40px}
+    .foot{display:flex;gap:18px;justify-content:space-between;align-items:center;padding:20px 0;color:var(--muted)}
+
+    /* timeline */
+    .timeline{position:relative;padding-left:22px}
+    .timeline:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:#1a2636}
+    .timeline .item{position:relative;margin:14px 0}
+    .timeline .item:before{content:"";position:absolute;left:-2px;top:.6em;width:10px;height:10px;border-radius:50%;background:linear-gradient(90deg,var(--brand),var(--brand2));box-shadow:0 0 0 4px rgba(125,211,252,.12)}
+
+    /* contact */
+    form{display:grid;gap:12px}
+    input,textarea{background:#0c1219;border:1px solid #1b2635;border-radius:12px;padding:12px;color:var(--text);font:inherit}
+    input:focus,textarea:focus{outline:none;box-shadow:var(--ring)}
+    textarea{min-height:120px;resize:vertical}
+
+    .tag{display:inline-block;border:1px solid #1d2a3a;border-radius:999px;padding:6px 10px;margin:4px 6px 0 0;color:#c8d4e3;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="badge">António Fonseca</div>
+        <div class="links">
+          <a href="#sobre">Sobre</a>
+          <a href="#competencias">Competências</a>
+          <a href="#provas">Provas</a>
+          <a href="#carta">Carta</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <p class="badge">Candidatura — Marketing & Redes Sociais</p>
+        <h1 class="title">Ajudo marcas a crescer nas redes sociais com estratégia, conteúdo e performance.</h1>
+        <p class="subtitle">Site de candidatura preparado para responder a uma oportunidade em <strong>Marketing & Redes Sociais</strong> no Net-Empregos (Ref. 14166884). Conteúdos editáveis.</p>
+        <div class="panel">
+          <div class="typing-wrap">
+            <span id="typing"></span><span class="cursor"></span>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#carta">Ler carta de motivação</a>
+          <a class="btn btn-ghost" href="#provas">Ver provas & casos</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Resumo rápido</h3>
+        <ul class="muted" style="margin:8px 0 0 18px">
+          <li>Planeamento editorial e gestão de comunidades (IG, FB, LinkedIn, TikTok)</li>
+          <li>Copywriting e produção de criativos (Canva/Adobe)</li>
+          <li>Gestão de campanhas (Meta Ads & Google Ads) orientadas a objetivos</li>
+          <li>Relatórios com métricas de negócio: alcance, CTR, CPL, ROAS</li>
+          <li>Modelo de trabalho: remoto/híbrido, disponibilidade para deslocações</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMPETÊNCIAS -->
+    <section id="competencias" class="grid grid-3">
+      <div class="card">
+        <h3>Estrategia & Conteúdo</h3>
+        <p class="muted">Calendário editorial, guidelines de tom de voz, rubricas, UGC/UGS, integrações com blog/newsletter.</p>
+        <div class="tag">Planeamento mensal</div>
+        <div class="tag">Calendário 30/60/90</div>
+        <div class="tag">Tom de voz</div>
+        <div class="tag">Storytelling</div>
+      </div>
+      <div class="card">
+        <h3>Performance & Paid</h3>
+        <p class="muted">Objetivos: awareness, tráfego, leads e vendas. Segmentação, testes A/B, pixels e eventos.</p>
+        <div class="tag">Meta Ads</div><div class="tag">Google Ads</div><div class="tag">Testes A/B</div><div class="tag">Pixels/Tags</div>
+      </div>
+      <div class="card">
+        <h3>Análise & Reporting</h3>
+        <p class="muted">Dashboards simples focados em métricas de negócio e recomendações acionáveis por sprint.</p>
+        <div class="tag">CTR/CPC/CPL</div><div class="tag">ROAS</div><div class="tag">Reports quinzenais</div>
+      </div>
+    </section>
+
+    <!-- PROVAS / CASOS -->
+    <section id="provas" style="margin-top:24px">
+      <h2 class="title" style="font-size:32px">Provas & Casos de Trabalho</h2>
+      <p class="muted">Alguns exemplos de formatos e entregáveis que posso criar. (Substitui pelos teus próprios links/ficheiros quando quiseres.)</p>
+      <div class="grid grid-3" style="margin-top:12px">
+        <div class="card">
+          <h3>Plano Editorial 30 dias</h3>
+          <p class="muted">Template com 4 rubricas, 8 posts estáticos, 6 vídeos curtos, 8 stories e 8 reposts UGC.</p>
+          <p class="kpi">+ Consistência <small>/ organização</small></p>
+          <a class="btn btn-ghost" href="#" onclick="alert('Anexa aqui o teu PDF/Google Sheet do calendário.');return false;">Ver exemplo</a>
+        </div>
+        <div class="card">
+          <h3>Guia de Tom de Voz</h3>
+          <p class="muted">Mensagem, pilares, do/don'ts, exemplos de copy e respostas a comentários.</p>
+          <p class="kpi">+ Coerência <small>/ branding</small></p>
+          <a class="btn btn-ghost" href="#" onclick="alert('Coloca aqui o link para o teu guia.');return false;">Ver exemplo</a>
+        </div>
+        <div class="card">
+          <h3>Mini-case Paid Social</h3>
+          <p class="muted">Teste A/B criativo → otimização de público → melhoria de CTR e CPL. (Métricas ilustrativas.)</p>
+          <p class="kpi">CTR ↑ 30% <small>(exemplo)</small></p>
+          <a class="btn btn-ghost" href="#" onclick="alert('Substitui por um case real que possas partilhar.');return false;">Ver exemplo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE / EXPERIÊNCIA -->
+    <section id="sobre" style="margin-top:24px">
+      <h2 class="title" style="font-size:32px">Sobre mim</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <p>Sou o <strong>António Fonseca</strong> e trabalho na interseção entre estratégia digital, conteúdo e performance. Tenho bases em Marketing Digital & Business Strategy e foco-me em entregar resultados práticos: crescimento de comunidades, leads qualificadas e vendas a partir de conteúdos relevantes.</p>
+          <p class="muted">Procuro desafios em que possa gerir redes sociais de ponta a ponta — do planeamento ao reporting — e colaborar com equipas criativas e comerciais.</p>
+          <div>
+            <span class="tag">Social Media</span>
+            <span class="tag">Copywriting</span>
+            <span class="tag">Design Light (Canva/Adobe)</span>
+            <span class="tag">Gestão de Projetos</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Linha do tempo (resumo)</h3>
+          <div class="timeline">
+            <div class="item">
+              <strong>2024–2025</strong> — Projetos em Marketing Digital (planeamento de conteúdo, pequenas campanhas, relatórios)
+            </div>
+            <div class="item">
+              <strong>2023–2024</strong> — Formação contínua em estratégia e ferramentas (social, ads, analytics)
+            </div>
+            <div class="item">
+              <strong>Até 2023</strong> — Experiências diversificadas em comunicação e negócios
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTA DE MOTIVAÇÃO -->
+    <section id="carta" style="margin-top:24px">
+      <h2 class="title" style="font-size:32px">Carta de motivação</h2>
+      <div class="card">
+        <p>Olá,</p>
+        <p>Vi a oferta <em>“Marketing & Redes Sociais”</em> no Net‑Empregos (Ref. 14166884) e gostaria de apresentar a minha candidatura. O que me motiva nesta função é a combinação de <strong>planeamento estratégico</strong> com <strong>execução criativa</strong> e <strong>análise de resultados</strong>. É exatamente onde sinto que entrego mais valor.</p>
+        <p>Posso assumir a gestão diária de redes sociais (Facebook, Instagram, LinkedIn e TikTok): calendarização, produção/adaptação de conteúdos, publicação e interação com a comunidade. Paralelamente, configuro campanhas em Meta Ads/Google Ads alinhadas com objetivos concretos (awareness, tráfego, leads), monitorizando KPIs como alcance, CTR, CPL e ROAS para orientar decisões.</p>
+        <p>Trabalho bem em equipa, escrevo com clareza, cuido de detalhes visuais e mantenho uma rotina de <strong>testes A/B</strong> para evoluir criativos e segmentações. Tenho disponibilidade para formato remoto/híbrido e deslocações pontuais, e consigo começar rapidamente.</p>
+        <p>Obrigado pelo tempo e consideração. Ficarei contente em mostrar exemplos de trabalho e discutir como posso contribuir.</p>
+        <p>Com os melhores cumprimentos,<br/>António Fonseca</p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" style="margin-top:24px">
+      <h2 class="title" style="font-size:32px">Contacto</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <form onsubmit="sendEmail(event)">
+            <label>Nome<br/><input id="name" placeholder="O seu nome" required/></label>
+            <label>Email<br/><input id="email" type="email" placeholder="email@exemplo.com" required/></label>
+            <label>Mensagem<br/><textarea id="msg" placeholder="Escreva a sua mensagem"></textarea></label>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button class="btn btn-ghost" type="button" onclick="copyLink()">Copiar link do site</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Disponibilidade</h3>
+          <ul class="muted" style="margin:8px 0 0 18px">
+            <li>Formato: remoto/híbrido</li>
+            <li>Entrada: imediata (ajustável)</li>
+            <li>Local: Viseu (deslocações possíveis)</li>
+          </ul>
+          <p style="margin-top:10px"><a class="btn btn-ghost" href="mailto:seu.email@exemplo.com?subject=Candidatura%20Marketing%20%26%20Redes%20Sociais">Enviar email direto</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot container">
+        <span>© <span id="year"></span> António Fonseca</span>
+        <span class="muted">Preparado com HTML + CSS + JavaScript (efeito typewriter "à mão").</span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // typing effect (à mão, JS puro)
+    const frases = [
+      "Planeamento editorial e gestão diária das redes.",
+      "Copy & criativos alinhados com objetivos.",
+      "Testes A/B constantes para melhorar resultados.",
+      "Relatórios claros com métricas de negócio."
+    ];
+    let i = 0;      // posição da letra
+    let j = 0;      // índice da frase
+    let apagando = false;
+    const typingEl = document.getElementById('typing');
+
+    function type(){
+      const atual = frases[j];
+      if(!apagando){
+        typingEl.textContent = atual.substring(0, i++);
+        if(i > atual.length){
+          apagando = true; setTimeout(type, 1400); return;
+        }
+      } else {
+        typingEl.textContent = atual.substring(0, i--);
+        if(i < 0){ apagando = false; j = (j+1) % frases.length; }
+      }
+      setTimeout(type, apagando ? 45 : 85);
+    }
+    type();
+
+    // simple email helper (abre mailto)
+    function sendEmail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('msg').value.trim();
+      const subject = encodeURIComponent('Candidatura — Marketing & Redes Sociais');
+      const body = encodeURIComponent(`Olá,\n\nSou o António Fonseca.\n\n${msg}\n\nContacto: ${name} <${email}>`);
+      window.location.href = `mailto:seu.email@exemplo.com?subject=${subject}&body=${body}`;
+    }
+
+    function copyLink(){
+      navigator.clipboard.writeText(window.location.href).then(()=>{
+        alert('Ligação copiada para a área de transferência.');
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
